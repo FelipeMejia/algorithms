@@ -1,12 +1,4 @@
 #!/bin/python3
-
-import math
-import os
-import random
-import re
-import sys
-
-
 #
 # Complete the 'isAlphabeticPalindrome' function below.
 #
@@ -16,10 +8,7 @@ import sys
 
 
 def isAlphabeticPalindrome(code):
-    letters = []
-    for char in code:
-        if char.isalpha():
-            letters.append(char.lower())
+    letters = [char.lower() for char in code if char.isalpha()]
 
     if not len(letters):
         return True
